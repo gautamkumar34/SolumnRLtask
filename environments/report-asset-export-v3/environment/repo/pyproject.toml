@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assetsvc"
+version = "0.1.0"
+description = "Internal report asset service"
+requires-python = ">=3.10"
+
+[project.scripts]
+assetsvc = "assetsvc.cli:main"
+
+[tool.setuptools]
+packages = ["assetsvc"]

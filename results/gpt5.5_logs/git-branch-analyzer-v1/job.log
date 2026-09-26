@@ -1,0 +1,176 @@
+Installing: asciinema
+Installing: asciinema
+Installing: asciinema
+Installing: asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Installing asciinema via pip...
+Installing asciinema via pip...
+Installing asciinema via pip...
+Installing asciinema via pip...
+Failed to install asciinema using pip
+Failed to install asciinema using pip
+Failed to install asciinema using pip
+Failed to install asciinema using pip
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,220p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__qafmVZb/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Sending keys: ["sed -n '1,200p' gitstat/utils.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["find gitstat tests -maxdepth 2 -type f -print -exec sed -n '1,220p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' gitstat/utils.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["find tests -maxdepth 1 -type f -name 'test_*.py' -print -exec sed -n '1,220p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["find gitstat tests -maxdepth 2 -type f -print -exec sed -n '1,180p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat pyproject.toml\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__qafmVZb/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Sending keys: ["sed -n '1,200p' gitstat/utils.py && sed -n '1,120p' gitstat/__main__.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python3 - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\nold = \'\'\'def log(rev, count=10):\\n    """Return the most recent commits on a revision, newest first."""\\n    out = run_cmd(f"git log --oneline -n {count} {rev}")\\n    return [line.rstrip() for line in out.splitlines() if line.strip()]\\n\'\'\'\nnew = \'\'\'def log(rev, count=10):\\n    """Return the most recent commits on a revision, newest first."""\\n    out = run_cmd(f"git log --oneline -n {count} {rev}")\\n    return [line.rstrip() for line in out.splitlines() if line.strip()]\\n\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    commits = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").strip()\\n    return [f"commits: {commits}", f"latest: {latest}"]\\n\'\'\'\nif old not in s:\n    raise SystemExit(\'expected analyzer block not found\')\np.write_text(s.replace(old, new))\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\ns = s.replace(\'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\'\'\', \'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    p_summarize = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summarize.add_argument("rev")\\n\'\'\')\ns = s.replace(\'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\', \'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\')\np.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q tests/test_summarize.py\n'] min_timeout_sec: 5.0 max_timeout_sec: 180.0
+Sending keys: ['python - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\ninsert = \'\'\'\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    commits = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").strip()\\n    return [f"commits: {commits}", f"latest: {latest}"]\\n\'\'\'\nif \'def summarize(\' not in s:\n    s = s.rstrip() + insert + \'\\n\'\np.write_text(s)\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\ns = s.replace(\n    \'    p_log.add_argument("rev")\\n    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\',\n    \'    p_log.add_argument("rev")\\n    p_summarize = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summarize.add_argument("rev")\\n\'\n)\ns = s.replace(\n    \'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n\',\n    \'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n\'\n)\np.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py && sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q\n'] min_timeout_sec: 5.0 max_timeout_sec: 180.0
+Sending keys: ['python3 - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\ninsert = \'\'\'\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    commits = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").strip()\\n    return [f"commits: {commits}", f"latest: {latest}"]\\n\'\'\'\nif \'def summarize(\' not in s:\n    s = s.rstrip() + insert + \'\\n\'\np.write_text(s)\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\nif \'p_summary = sub.add_parser("summarize"\' not in s:\n    s = s.replace(\n        \'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\',\n        \'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    p_summary = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summary.add_argument("rev")\\n\'\n    )\nif \'elif args.command == "summarize":\' not in s:\n    s = s.replace(\n        \'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    else:\',\n        \'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n    else:\'\n    )\np.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,220p' gitstat/analyzer.py && sed -n '1,220p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q\n'] min_timeout_sec: 2.0 max_timeout_sec: 180.0
+Sending keys: ['pytest -q\n'] min_timeout_sec: 10.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Sending keys: ['python3 - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\nold = \'\'\'def log(rev, count=10):\\n    """Return the most recent commits on a revision, newest first."""\\n    out = run_cmd(f"git log --oneline -n {count} {rev}")\\n    return [line.rstrip() for line in out.splitlines() if line.strip()]\\n\'\'\'\nnew = \'\'\'def log(rev, count=10):\\n    """Return the most recent commits on a revision, newest first."""\\n    out = run_cmd(f"git log --oneline -n {count} {rev}")\\n    return [line.rstrip() for line in out.splitlines() if line.strip()]\\n\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    commits = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").rstrip("\\\\n")\\n    return [f"commits: {commits}", f"latest: {latest}"]\\n\'\'\'\nif old not in s:\n    raise SystemExit(\'expected analyzer block not found\')\np.write_text(s.replace(old, new))\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\ns = s.replace(\n\'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\'\'\',\n\'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    p_summarize = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summarize.add_argument("rev")\\n\'\'\')\ns = s.replace(\n\'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\',\n\'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\')\np.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,220p' gitstat/analyzer.py && sed -n '1,220p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q tests/test_summarize.py\n'] min_timeout_sec: 3.0 max_timeout_sec: 180.0
+Sending keys: ['pytest -q\n'] min_timeout_sec: 3.0 max_timeout_sec: 180.0
+Sending keys: ['python3 -m pytest -q\n'] min_timeout_sec: 2.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__qafmVZb/agent/trajectory.json
+Sending keys: ['python -m pytest -q\n'] min_timeout_sec: 5.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Sending keys: ['tmp=$(mktemp -d)\ncd "$tmp"\ngit init -q -b main\ngit config user.name \'Ada Lovelace\'\ngit config user.email \'ada@example.com\'\nprintf \'a\\n\' > a.txt\ngit add . && git commit -q -m \'Initial commit\'\nprintf \'b\\n\' > b.txt\ngit add . && git commit -q -m \'Add login form\'\ngit tag v2.1.0\nPYTHONPATH=/app python3 -m gitstat summarize v2.1.0\ncd /app\nrm -rf "$tmp"\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Sending keys: ["nl -ba gitstat/analyzer.py && printf '\\n--- cli ---\\n' && nl -ba gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['tmp=$(mktemp -d)\ncd "$tmp"\ngit init -q -b main\ngit config user.name \'Ada Lovelace\'\ngit config user.email ada@example.com\nprintf \'a\\n\' > a.txt\ngit add . && git commit -q -m \'Initial commit\'\nprintf \'b\\n\' > b.txt\ngit add . && git commit -q -m \'Add login form\'\ngit tag v2.1.0\nPYTHONPATH=/app python -m gitstat summarize v2.1.0\ncd /app\nrm -rf "$tmp"\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['python3 -m py_compile gitstat/analyzer.py gitstat/cli.py gitstat/__main__.py\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['python3 -m pytest -q tests/test_summarize.py\n'] min_timeout_sec: 5.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Sending keys: ['cat pyproject.toml\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python3 -m pytest -q\n'] min_timeout_sec: 3.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Sending keys: ['tmp=$(mktemp -d) && cd "$tmp" && git init -q -b main && git config user.name \'Ada Lovelace\' && git config user.email ada@example.com && printf \'a\\n\' > a.txt && git add . && git commit -q -m \'Initial commit\' && printf \'b\\n\' > b.txt && git add . && git commit -q -m \'Add login form\' && git tag v2.1.0 && PYTHONPATH=/app python3 -m gitstat summarize v2.1.0; status=$?; cd /app; rm -rf "$tmp"; exit $status\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__qafmVZb/agent/trajectory.json
+Session has ended, breaking out of agent loop
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__qafmVZb/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Collecting main service artifacts
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__GeWL3ws/agent/trajectory.json
+Collecting main service artifacts
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__aovyLpk/agent/trajectory.json
+Collecting main service artifacts
+Sending keys: ["find tests -maxdepth 1 -type f -print -exec sed -n '1,220p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['tmp=$(mktemp -d)\n(\n  cd "$tmp" || exit 1\n  git init -q -b main\n  git config user.name \'Ada Lovelace\'\n  git config user.email \'ada@example.com\'\n  printf \'a\\n\' > a.txt\n  git add . && git commit -q -m \'Initial commit\'\n  printf \'b\\n\' > b.txt\n  git add . && git commit -q -m \'Add login form\'\n  git tag v2.1.0\n  PYTHONPATH=/app python3 -m gitstat summarize v2.1.0\n)\nrm -rf "$tmp"\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ["python3 -m gitstat --help | sed -n '1,120p'\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Installing: asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Installing: asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y asciinema
+Installing asciinema via pip...
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Installing asciinema via pip...
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__vt9pguC/agent/trajectory.json
+Collecting main service artifacts
+Failed to install asciinema using pip
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Failed to install asciinema using pip
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' tests/test_summarize.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Sending keys: ["sed -n '1,200p' gitstat/utils.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["ls -la gitstat && sed -n '1,120p' gitstat/__main__.py 2>/dev/null || true\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\nold = \'\'\'def log(rev, count=10):\\n    """Return the most recent commits on a revision, newest first."""\\n    out = run_cmd(f"git log --oneline -n {count} {rev}")\\n    return [line.rstrip() for line in out.splitlines() if line.strip()]\\n\'\'\'\nnew = old + \'\'\'\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    commit_count = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").strip()\\n    return [f"commits: {commit_count}", f"latest: {latest}"]\\n\'\'\'\nif old not in s:\n    raise SystemExit(\'expected analyzer log block not found\')\np.write_text(s.replace(old, new))\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\ns = s.replace(\'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\'\'\', \'\'\'    p_log = sub.add_parser("log", help="Show recent commits on a revision")\\n    p_log.add_argument("rev")\\n    p_summarize = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summarize.add_argument("rev")\\n\'\'\')\ns = s.replace(\'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\', \'\'\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n    else:  # pragma: no cover - argparse rejects unknown commands first\\n\'\'\')\np.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q\n'] min_timeout_sec: 10.0 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,200p' gitstat/utils.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["find tests -maxdepth 1 -type f -name 'test_*.py' -print -exec sed -n '1,220p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python - <<\'PY\'\nfrom pathlib import Path\np = Path(\'gitstat/analyzer.py\')\ns = p.read_text()\ninsert = \'\'\'\\n\\ndef summarize(rev):\\n    """Return a two-line summary for a revision."""\\n    count = run_cmd(f"git rev-list --count {rev}").strip()\\n    latest = run_cmd(f"git log -1 --format=\'%s\' {rev}").strip()\\n    return [f"commits: {count}", f"latest: {latest}"]\\n\'\'\'\nif \'def summarize(\' not in s:\n    s = s.rstrip() + insert + \'\\n\'\n    p.write_text(s)\n\np = Path(\'gitstat/cli.py\')\ns = p.read_text()\nif \'p_summarize = sub.add_parser("summarize"\' not in s:\n    s = s.replace(\'    # A `summarize <rev>` subcommand is added here — see instruction.md.\\n\', \'    p_summarize = sub.add_parser("summarize", help="Summarize a revision")\\n    p_summarize.add_argument("rev")\\n\')\nif \'elif args.command == "summarize":\' not in s:\n    s = s.replace(\'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n\', \'    elif args.command == "log":\\n        print("\\\\n".join(analyzer.log(args.rev)))\\n    elif args.command == "summarize":\\n        print("\\\\n".join(analyzer.summarize(args.rev)))\\n\')\n    p.write_text(s)\nPY\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,240p' gitstat/analyzer.py && sed -n '1,240p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['pytest -q tests/test_summarize.py\n'] min_timeout_sec: 2.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Sending keys: ["sed -n '1,220p' gitstat/analyzer.py && printf '\\n--- cli ---\\n' && sed -n '1,220p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python -m pytest -q\n'] min_timeout_sec: 10.0 max_timeout_sec: 180.0
+Sending keys: ["cat pyproject.toml && find gitstat -maxdepth 1 -type f -print -exec sed -n '1,160p' {} \\;\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python -m pytest -q tests/test_summarize.py\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['python -m compileall -q gitstat\n'] min_timeout_sec: 0.5 max_timeout_sec: 180.0
+Sending keys: ["python - <<'PY'\nimport os, shutil, subprocess, sys, tempfile\n\nd = tempfile.mkdtemp()\ntry:\n    def g(*a):\n        subprocess.run(['git', *a], cwd=d, check=True, capture_output=True, text=True)\n    g('init', '-q', '-b', 'main')\n    g('config', 'user.name', 'Ada Lovelace')\n    g('config', 'user.email', 'ada@example.com')\n    with open(os.path.join(d, 'a.txt'), 'w') as f:\n        f.write('a\\n')\n    g('add', '.')\n    g('commit', '-q', '-m', 'Initial commit')\n    with open(os.path.join(d, 'b.txt'), 'w') as f:\n        f.write('b\\n')\n    g('add', '.')\n    g('commit', '-q', '-m', 'Add login form')\n    g('tag', 'v2.1.0')\n    p = subprocess.run([sys.executable, '-m', 'gitstat', 'summarize', 'v2.1.0'], cwd=d, capture_output=True, text=True)\n    print('returncode:', p.returncode)\n    print('stdout:')\n    print(p.stdout, end='')\n    print('stderr:')\n    print(p.stderr, end='')\n    assert p.returncode == 0\n    assert p.stdout == 'commits: 2\\nlatest: Add login form\\n'\nfinally:\n    shutil.rmtree(d, ignore_errors=True)\nPY\n"] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Sending keys: ["python - <<'PY'\nimport os, shutil, subprocess, sys, tempfile\n\nd = tempfile.mkdtemp()\ntry:\n    def g(*a):\n        subprocess.run(['git', *a], cwd=d, check=True, capture_output=True, text=True)\n    def run(*args):\n        return subprocess.run([sys.executable, '-m', 'gitstat', *args], cwd=d, capture_output=True, text=True)\n\n    g('init', '-q', '-b', 'main')\n    g('config', 'user.name', 'Ada Lovelace')\n    g('config', 'user.email', 'ada@example.com')\n    with open(os.path.join(d, 'README.md'), 'w') as f:\n        f.write('# project\\n')\n    g('add', '.')\n    g('commit', '-q', '-m', 'Initial commit')\n    with open(os.path.join(d, 'config.txt'), 'w') as f:\n        f.write('config\\n')\n    g('add', '.')\n    g('commit', '-q', '-m', 'Add config')\n    g('branch', 'feature/login')\n\n    checks = {\n        ('branches',): lambda out: 'main' in out and 'feature/login' in out,\n        ('authors',): lambda out: 'Ada Lovelace' in out,\n        ('activity',): lambda out: out.strip() != '',\n        ('log', 'main'): lambda out: out.strip() != '',\n    }\n    for args, ok in checks.items():\n        p = run(*args)\n        print('$ python -m gitstat', *args)\n        print(p.stdout, end='')\n        assert p.returncode == 0, p.stderr\n        assert ok(p.stdout)\n    print('manual regression checks passed')\nfinally:\n    shutil.rmtree(d, ignore_errors=True)\nPY\n"] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['git diff -- gitstat/analyzer.py gitstat/cli.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Sending keys: ['python -m compileall -q gitstat\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['tmp=$(mktemp -d) && git -C "$tmp" init -q -b main && git -C "$tmp" config user.name \'Ada Lovelace\' && git -C "$tmp" config user.email \'ada@example.com\' && printf \'a\\n\' > "$tmp/a.txt" && git -C "$tmp" add . && git -C "$tmp" commit -q -m \'Initial commit\' && printf \'b\\n\' > "$tmp/b.txt" && git -C "$tmp" add . && git -C "$tmp" commit -q -m \'Add login form\' && git -C "$tmp" tag v2.1.0 && (cd "$tmp" && PYTHONPATH=/app python -m gitstat summarize v2.1.0); rm -rf "$tmp"\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__foC7vVF/agent/trajectory.json
+Collecting main service artifacts
+Parser warnings: - Command 1 should end with newline when followed by another command. Otherwise the two commands will be concatenated together on the same line.
+Sending keys: ['q'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["sed -n '1,120p' gitstat/analyzer.py && sed -n '1,120p' gitstat/cli.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['python -m gitstat --help\n'] min_timeout_sec: 0.5 max_timeout_sec: 180.0
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v1/rollouts_20260926_202416/git-branch-analyzer-v1__gmwkjey/agent/trajectory.json
+Collecting main service artifacts

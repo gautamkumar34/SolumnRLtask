@@ -1,0 +1,6 @@
+Trajectory dumped to jobs/report-asset-export/rollouts_20260926_202416/report-asset-export__VsD9TjA/agent/trajectory.json
+Trajectory dumped to jobs/report-asset-export/rollouts_20260926_202416/report-asset-export__VsD9TjA/agent/trajectory.json
+Trajectory dumped to jobs/report-asset-export/rollouts_20260926_202416/report-asset-export__VsD9TjA/agent/trajectory.json
+Trajectory dumped to jobs/report-asset-export/rollouts_20260926_202416/report-asset-export__VsD9TjA/agent/trajectory.json
+Trial report-asset-export__VsD9TjA failed: report-asset-export__VsD9TjA__env: failed to send non-blocking keys: command="tmux send-keys -t terminus-2 -- 'git diff -- assetsvc/storage.py assetsvc/cli.py 2>/dev/null || tru, return_code=1, stderr=None, stdout='no server running on /tmp/tmux-1000/default\n'
+Collecting main service artifacts

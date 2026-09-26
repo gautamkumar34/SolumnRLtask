@@ -1,0 +1,297 @@
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ asciinema rec --stdin /logs/agent/recording.cast
+[?2004lbash: asciinema: command not found
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ clear
+[?2004l[H[J[3J[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ ls -la
+[?2004ltotal 28
+drwxr-xr-x 1 agent agent 4096 Sep 26 15:13 [0m[01;34m.[0m
+drwxr-xr-x 1 root  root  4096 Sep 26 15:14 [01;34m..[0m
+-rw-r--r-- 1 agent agent  386 Sep 26 14:52 README.md
+drwxr-xr-x 1 agent agent 4096 Sep 26 14:52 [01;34massetsvc[0m
+drwxr-xr-x 1 agent agent 4096 Sep 26 15:13 [01;34massetsvc.egg-info[0m
+-rw-r--r-- 1 agent agent  298 Sep 26 14:52 pyproject.toml
+drwxr-xr-x 1 agent agent 4096 Sep 26 15:13 [01;34mtests[0m
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ find . -maxdepth 3 -type f | sort
+[?2004l./README.md
+./assetsvc.egg-info/PKG-INFO
+./assetsvc.egg-info/SOURCES.txt
+./assetsvc.egg-info/dependency_links.txt
+./assetsvc.egg-info/entry_points.txt
+./assetsvc.egg-info/top_level.txt
+./assetsvc/__init__.py
+./assetsvc/__main__.py
+./assetsvc/cli.py
+./assetsvc/storage.py
+./pyproject.toml
+./tests/test_commands.py
+./tests/test_export.py
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ sed -n '1,240p' assetsvc/storage.py
+[?2004l"""Storage helpers for the report asset service.
+
+Assets live under a single storage root and are organised into dated
+subfolders (e.g. ``2024/q3/summary.txt``). Names handed to the lookup helpers
+below normally come from :func:`list_assets`, i.e. they are already known to
+live under the root.
+"""
+
+import os
+
+STORAGE_DIR = os.environ.get("ASSET_STORAGE_DIR", "/data/reports")
+
+
+def asset_path(name):
+    """Join an asset name onto the storage root."""
+    return os.path.join(STORAGE_DIR, name)
+
+
+def list_assets():
+    """Return every stored asset, as paths relative to the storage root."""
+    result = []
+    for root, _, files in os.walk(STORAGE_DIR):
+        for fn in files:
+            full = os.path.join(root, fn)
+            result.append(os.path.relpath(full, STORAGE_DIR))
+    return sorted(result)
+
+
+def asset_size(name):
+    """Return the size in bytes of a stored asset (name from list_assets)."""
+    return os.path.getsize(asset_path(name))
+
+
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ sed -n '1,240p' assetsvc/cli.py
+[?2004l"""Command-line entrypoint for assetsvc."""
+
+import argparse
+
+from . import storage
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        prog="assetsvc", description="Internal report asset service"
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("list", help="List stored report assets")
+    p_meta = sub.add_parser("meta", help="Show the size of a stored asset")
+    p_meta.add_argument("name")
+    # An `export <path>` subcommand is added here — see instruction.md.
+
+    args = parser.parse_args(argv)
+
+    if args.command == "list":
+        print("\n".join(storage.list_assets()))
+    elif args.command == "meta":
+        print(storage.asset_size(args.name))
+    else:  # pragma: no cover - argparse rejects unknown commands first
+        parser.error(f"unknown command: {args.command}")
+
+
+if __name__ == "__main__":
+    main()
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ sed -n '1,240p' tests/test_export.py
+[?2004l"""Spec test for the new `export` command (currently failing)."""
+
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+import pytest
+
+
+@pytest.fixture
+def store():
+    d = tempfile.mkdtemp()
+    os.makedirs(os.path.join(d, "2024", "q3"))
+    with open(os.path.join(d, "2024", "q3", "summary.txt"), "w") as f:
+        f.write("Q3 revenue up 12%\n")
+    yield d
+    shutil.rmtree(d, ignore_errors=True)
+
+
+def run(store, *args):
+    env = dict(os.environ, ASSET_STORAGE_DIR=store)
+    return subprocess.run(
+        [sys.executable, "-m", "assetsvc", *args],
+        capture_output=True, text=True, env=env,
+    ).stdout
+
+
+# export should locate the file like the other commands — e.g. asset_size(name)
+# uses storage.asset_path(name), i.e.  os.path.join(STORAGE_DIR, name)
+def test_export_nested(store):
+    out = run(store, "export", "2024/q3/summary.txt")
+    assert "Q3 revenue up 12%" in out
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ sed -n '1,240p' tests/test_commands.py
+[?2004l"""Regression tests for the existing assetsvc subcommands.
+
+They build a throwaway asset store and exercise the CLI end to end. They must
+keep passing after the new `export` command is added.
+"""
+
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+import pytest
+
+
+@pytest.fixture(scope="module")
+def store():
+    d = tempfile.mkdtemp()
+    os.makedirs(os.path.join(d, "2024", "q3"))
+    with open(os.path.join(d, "overview.txt"), "w") as f:
+        f.write("Company overview\n")
+    with open(os.path.join(d, "2024", "q3", "summary.txt"), "w") as f:
+        f.write("Q3 revenue up 12%\n")
+    yield d
+    shutil.rmtree(d, ignore_errors=True)
+
+
+def run(store, *args):
+    env = dict(os.environ, ASSET_STORAGE_DIR=store)
+    p = subprocess.run(
+        [sys.executable, "-m", "assetsvc", *args],
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+    return p.stdout
+
+
+def test_list(store):
+    out = run(store, "list")
+    assert "overview.txt" in out
+    assert os.path.join("2024", "q3", "summary.txt") in out
+
+
+def test_meta(store):
+    out = run(store, "meta", "overview.txt")
+    assert out.strip().isdigit()
+    assert int(out.strip()) > 0
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ python3 - <<'PY'
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> p = Path('assetsvc/storage.py')
+[?2004l[?2004h> s = p.read_text()
+[?2004l[?2004h> if 'def export_asset(' not in s:
+[?2004l[?2004h>     s = s.rstrip() + '\n\n\ndef export_asset(name):\n    """Return the contents of a stored asset (name from list_assets)."""\n    with open(asset_path(name), "r") as f:\n        return f.read()\n'
+[?2004l[?2004h>     p.write_text(s)
+[?2004l[?2004h> 
+[?2004l[?2004h> p = Path('assetsvc/cli.py')
+[?2004l[?2004h> s = p.read_text()
+[?2004l[?2004h> s = s.replace('import argparse\n', 'import argparse\nimport sys\n')
+[?2004l[?2004h> s = s.replace('    # An `export <path>` subcommand is added here — see instruction.md.\n', '    p_export = sub.add_parser("export", help="Print the contents of a stored asset")\n    p_export.add_argument("name")\n')
+[?2004l[?2004h> s = s.replace('    elif args.command == "meta":\n        print(storage.asset_size(args.name))\n', '    elif args.command == "meta":\n        print(storage.asset_size(args.name))\n    elif args.command == "export":\n        sys.stdout.write(storage.export_asset(args.name))\n')
+[?2004l[?2004h> p.write_text(s)
+[?2004l[?2004h> PY
+[?2004l[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ sed -n '1,240p' assetsvc/storage.py && printf '\n--- cli ---\n' && sed -n '1,240p' assetsvc/cli.py
+[?2004l"""Storage helpers for the report asset service.
+
+Assets live under a single storage root and are organised into dated
+subfolders (e.g. ``2024/q3/summary.txt``). Names handed to the lookup helpers
+below normally come from :func:`list_assets`, i.e. they are already known to
+live under the root.
+"""
+
+import os
+
+STORAGE_DIR = os.environ.get("ASSET_STORAGE_DIR", "/data/reports")
+
+
+def asset_path(name):
+    """Join an asset name onto the storage root."""
+    return os.path.join(STORAGE_DIR, name)
+
+
+def list_assets():
+    """Return every stored asset, as paths relative to the storage root."""
+    result = []
+    for root, _, files in os.walk(STORAGE_DIR):
+        for fn in files:
+            full = os.path.join(root, fn)
+            result.append(os.path.relpath(full, STORAGE_DIR))
+    return sorted(result)
+
+
+def asset_size(name):
+    """Return the size in bytes of a stored asset (name from list_assets)."""
+    return os.path.getsize(asset_path(name))
+
+
+def export_asset(name):
+    """Return the contents of a stored asset (name from list_assets)."""
+    with open(asset_path(name), "r") as f:
+        return f.read()
+
+--- cli ---
+"""Command-line entrypoint for assetsvc."""
+
+import argparse
+import sys
+
+from . import storage
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        prog="assetsvc", description="Internal report asset service"
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("list", help="List stored report assets")
+    p_meta = sub.add_parser("meta", help="Show the size of a stored asset")
+    p_meta.add_argument("name")
+    p_export = sub.add_parser("export", help="Print the contents of a stored asset")
+    p_export.add_argument("name")
+
+    args = parser.parse_args(argv)
+
+    if args.command == "list":
+        print("\n".join(storage.list_assets()))
+    elif args.command == "meta":
+        print(storage.asset_size(args.name))
+    elif args.command == "export":
+        sys.stdout.write(storage.export_asset(args.name))
+    else:  # pragma: no cover - argparse rejects unknown commands first
+        parser.error(f"unknown command: {args.command}")
+
+
+if __name__ == "__main__":
+    main()
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ pytest -q tests/test_export.py
+[?2004lbash: pytest: command not found
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ pytest -q
+[?2004lbash: pytest: command not found
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ python3 -m pytest -q tests/test_export.py
+[?2004l/usr/local/bin/python3: No module named pytest
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ python3 -m pytest -q
+[?2004l/usr/local/bin/python3: No module named pytest
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ cat pyproject.toml
+[?2004l[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "assetsvc"
+version = "0.1.0"
+description = "Internal report asset service"
+requires-python = ">=3.10"
+
+[project.scripts]
+assetsvc = "assetsvc.cli:main"
+
+[tool.setuptools]
+packages = ["assetsvc"]
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ tmp=$(mktemp -d); mkdir -p "$tmp/2024/q3"; printf 'Company overview\n' > "$tmp/overview.txt"; printf 'Q3 revenue up 12%%\n' > "$tmp/2024/q3/summary.txt"; echo '--- export ---'; ASSET_STORAGE_DIR="$tmp" python3 -m assetsvc export 2024/q3/summary.txt; echo '--- list ---'; ASSET_STORAGE_DIR="$tmp" python3 -m assetsvc list; echo '--- meta ---'; ASSET_STORAGE_DIR="$tmp" python3 -m assetsvc meta overview.txt; rm -rf "$tmp"
+[?2004l--- export ---
+Q3 revenue up 12%
+--- list ---
+2024/q3/summary.txt
+overview.txt
+--- meta ---
+17
+[?2004h[01;32magent@49e5633fb0fa[00m:[01;34m/app[00m$ 

@@ -1,0 +1,132 @@
+{
+    "id": "958cd29d-1028-416f-91b1-3adf180d09e9",
+    "task_name": "solumn/report-asset-export",
+    "trial_name": "report-asset-export__VsD9TjA",
+    "trial_uri": "file:///Users/gautamkumar/SolumnRLtask/jobs/report-asset-export/rollouts_20260926_202416/report-asset-export__VsD9TjA",
+    "task_id": {
+        "path": "environments/report-asset-export"
+    },
+    "source": "environments",
+    "task_checksum": "13df048468abc6fb09c9b4acbaa86752a327315e5a0782818b5816f7a44deaf9",
+    "config": {
+        "task": {
+            "path": "environments/report-asset-export",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "environments"
+        },
+        "trial_name": "report-asset-export__VsD9TjA",
+        "trials_dir": "jobs/report-asset-export/rollouts_20260926_202416",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/gpt-5.5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "8ff42990-791a-4256-8da6-3756ed81123b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gpt-5.5",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 12369,
+        "n_cache_tokens": 5632,
+        "n_output_tokens": 3074,
+        "cost_usd": 0.128721,
+        "model_usage": {
+            "gpt-5.5": {
+                "n_input_tokens": 7076,
+                "n_cache_tokens": 1792,
+                "n_output_tokens": 2114,
+                "cost_usd": 0.09073600000000001
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 4,
+            "api_request_times_msec": [
+                3602.3519039154053,
+                10262.60495185852,
+                9554.404258728027,
+                10618.46113204956
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "report-asset-export__VsD9TjA__env: failed to send non-blocking keys: command=\"tmux send-keys -t terminus-2 -- 'git diff -- assetsvc/storage.py assetsvc/cli.py 2>/dev/null || tru, return_code=1, stderr=None, stdout='no server running on /tmp/tmux-1000/default\\n'",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/trial/trial.py\", line 418, in run\n    await self._run()\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 41, in _run\n    await self._run_agent()\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 77, in _run_agent\n    await self._run_agent_phase(\n    ...<5 lines>...\n    )\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/trial/trial.py\", line 554, in _run_agent_phase\n    await asyncio.wait_for(\n    ...<6 lines>...\n    )\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1743, in run\n    await self._run_agent_loop(\n    ...<3 lines>...\n    )\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1523, in _run_agent_loop\n    timeout_occurred, terminal_output = await self._execute_commands(\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/terminus_2.py\", line 1339, in _execute_commands\n    await session.send_keys(\n    ...<3 lines>...\n    )\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 817, in send_keys\n    await self._send_non_blocking_keys(\n    ...<2 lines>...\n    )\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 772, in _send_non_blocking_keys\n    await self._send_keys_to_session(keys, action=\"non-blocking\")\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 745, in _send_keys_to_session\n    await _flush()\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 735, in _flush\n    await self._send_key_batches(batch, action)\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/harbor/agents/terminus_2/tmux_session.py\", line 722, in _send_key_batches\n    raise self._send_keys_error(action, command, result)\nRuntimeError: report-asset-export__VsD9TjA__env: failed to send non-blocking keys: command=\"tmux send-keys -t terminus-2 -- 'git diff -- assetsvc/storage.py assetsvc/cli.py 2>/dev/null || tru, return_code=1, stderr=None, stdout='no server running on /tmp/tmux-1000/default\\n'\n",
+        "occurred_at": "2026-09-26T15:32:54.835116Z"
+    },
+    "started_at": "2026-09-26T15:31:15.196022Z",
+    "finished_at": "2026-09-26T15:32:58.613437Z",
+    "environment_setup": {
+        "started_at": "2026-09-26T15:31:15.640385Z",
+        "finished_at": "2026-09-26T15:31:20.277026Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-26T15:31:20.277083Z",
+        "finished_at": "2026-09-26T15:31:54.632484Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-26T15:31:54.632685Z",
+        "finished_at": "2026-09-26T15:32:53.717540Z"
+    },
+    "verifier": null,
+    "step_results": null
+}

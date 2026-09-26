@@ -1,0 +1,6 @@
+Trajectory dumped to jobs/git-branch-analyzer-v4/rollouts_20260926_202416/git-branch-analyzer-v4__KWpyqcj/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v4/rollouts_20260926_202416/git-branch-analyzer-v4__KWpyqcj/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v4/rollouts_20260926_202416/git-branch-analyzer-v4__KWpyqcj/agent/trajectory.json
+Trajectory dumped to jobs/git-branch-analyzer-v4/rollouts_20260926_202416/git-branch-analyzer-v4__KWpyqcj/agent/trajectory.json
+Trial git-branch-analyzer-v4__KWpyqcj failed: git-branch-analyzer-v4__KWpyqcj__env: failed to send non-blocking keys: command="tmux send-keys -t terminus-2 -- 'git diff -- gitstat/analyzer.py gitstat/cli.py tests/test_commands, return_code=1, stderr=None, stdout='no server running on /tmp/tmux-1000/default\n'
+Collecting main service artifacts

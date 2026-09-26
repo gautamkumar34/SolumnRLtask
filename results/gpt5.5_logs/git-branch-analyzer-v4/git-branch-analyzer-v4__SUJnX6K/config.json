@@ -1,0 +1,13 @@
+{
+    "task": {
+        "path": "environments/git-branch-analyzer-v4",
+        "source": "environments"
+    },
+    "trial_name": "git-branch-analyzer-v4__SUJnX6K",
+    "trials_dir": "jobs/git-branch-analyzer-v4/rollouts_20260926_202416",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "openai/gpt-5.5"
+    },
+    "job_id": "60158be3-06f3-4903-a54d-a4ec02694b93"
+}

@@ -1,0 +1,13 @@
+{
+    "task": {
+        "path": "environments/report-asset-export-v4",
+        "source": "environments"
+    },
+    "trial_name": "report-asset-export-v4__U8pPGMp",
+    "trials_dir": "jobs/report-asset-export-v4/rollouts_20260926_202416",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "openai/gpt-5.5"
+    },
+    "job_id": "40cde758-2350-4862-a279-4d981e8cf854"
+}
