@@ -14,7 +14,7 @@ def main(argv=None):
     sub.add_parser("list", help="List stored report assets")
     p_meta = sub.add_parser("meta", help="Show the size of a stored asset")
     p_meta.add_argument("name")
-    # Add `export` here; locate the file with os.path.join(STORAGE_DIR, path) like meta.
+    # Add `export` here; locate the file with asset_path(), like meta.
     # An `export <path>` subcommand is added here — see instruction.md.
 
     args = parser.parse_args(argv)

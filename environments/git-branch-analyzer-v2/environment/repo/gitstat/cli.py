@@ -16,7 +16,7 @@ def main(argv=None):
     sub.add_parser("activity", help="Show commit activity by day")
     p_log = sub.add_parser("log", help="Show recent commits on a revision")
     p_log.add_argument("rev")
-    # Add `summarize` here; build its git command with run_cmd(f"...") like log().
+    # Add `summarize` here; fetch the commits the way log() does.
     # A `summarize <rev>` subcommand is added here — see instruction.md.
 
     args = parser.parse_args(argv)

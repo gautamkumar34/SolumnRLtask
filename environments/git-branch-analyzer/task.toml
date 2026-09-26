@@ -20,7 +20,6 @@ user = "root"
 
 [environment]
 network_mode = "no-network"
-docker_image = "solumn/git-branch-analyzer:latest"
 cpus = 1
 memory_mb = 2048
 storage_mb = 10240

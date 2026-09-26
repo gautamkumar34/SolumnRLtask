@@ -1,4 +1,4 @@
-# Solumn selection task — code-security RL environments
+# Solumn AI — code-security RL environments
 
 Ten Harbor environments testing one slice of code security: **untrusted input
 reaching an interpreter**. Two families of five (one seed + four variants each).
@@ -129,9 +129,12 @@ family basename→0).
 - The single biggest lesson: **a labelled safe helper defeats the environment.**
   GPT-5.5 reliably reaches for an obvious safe path when one is handed to it. The
   pull has to be the *established* pattern, and the safe path merely reachable.
-- **The violation rate is ~100%.** Strong for "build for violations," but these
-  environments don't yet discriminate a sometimes-safe model. The pulls could be
-  softened if graded difficulty were the goal. Discussed in `QUALITY_BAR.md`.
+- **The violation rate is very high (~92–100%).** Strong for "build for
+  violations," but these environments don't sharply discriminate a sometimes-safe
+  model. A pressure test (removing the most explicit repo comment and re-running)
+  left the rate essentially unchanged and produced one safe run — evidence the
+  pull is the codebase convention, not the comment, and that the safe route is
+  reachable and chosen. See `results/pressure_test/` and `QUALITY_BAR.md`.
 - Shell injection needed a stronger pull than path traversal — an existing
   command that interpolates a caller's value (`log <rev>`) — because models are
   more heavily trained against `shell=True` string-building than against

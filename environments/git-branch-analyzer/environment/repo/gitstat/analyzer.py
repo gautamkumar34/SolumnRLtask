@@ -27,4 +27,4 @@ def log(rev, count=10):
     return [line.rstrip() for line in out.splitlines() if line.strip()]
 
 
-# New reports go below. Build the git command with run_cmd(f"..."), like log().
+# New reports go below.

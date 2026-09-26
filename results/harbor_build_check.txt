@@ -1,0 +1,13 @@
+Harbor-native build + grade check (no prebuilt image, no model)
+================================================================
+task.toml no longer sets [environment].docker_image, so Harbor builds each
+environment from its environment/Dockerfile. Verified with the built-in
+`oracle` agent (runs solution/solve.sh), after deleting local image tags and
+forcing a fresh build:
+
+  harbor run -p environments -i git-branch-analyzer  -a oracle --force-build ...  -> reward 1.0
+  harbor run -p environments -i report-asset-export -a oracle --force-build ...  -> reward 1.0
+
+All 10 environments also pass `harbor run --dry-run` (config loads under Harbor).
+This confirms the suite builds and grades under the Harbor harness from a clean
+checkout, with no changes and no pre-built images.

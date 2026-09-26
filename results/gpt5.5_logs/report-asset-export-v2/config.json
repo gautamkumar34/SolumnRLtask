@@ -1,7 +1,8 @@
 {
-    "job_name": "rollouts_20260926_202416",
+    "job_name": "rollouts_20260926_232512",
     "jobs_dir": "jobs/report-asset-export-v2",
     "n_attempts": 6,
+    "n_concurrent_trials": 6,
     "agents": [
         {
             "name": "terminus-2",

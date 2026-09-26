@@ -1,8 +1,8 @@
 {
-    "id": "fe0e4fe0-ca9f-406e-b9b6-94660bd7c141",
-    "started_at": "2026-09-26T20:47:45.844897",
-    "updated_at": "2026-09-26T20:52:37.006226",
-    "finished_at": "2026-09-26T20:52:37.006226",
+    "id": "3c1db9f2-ce55-4aa7-8bc6-8515b3268527",
+    "started_at": "2026-09-26T23:31:12.915476",
+    "updated_at": "2026-09-26T23:33:08.283078",
+    "finished_at": "2026-09-26T23:33:08.283078",
     "n_total_trials": 6,
     "stats": {
         "n_completed_trials": 6,
@@ -28,21 +28,21 @@
                 "reward_stats": {
                     "reward": {
                         "0.0": [
-                            "report-asset-export-v2__NXVnUry",
-                            "report-asset-export-v2__7vfFVSz",
-                            "report-asset-export-v2__cn8W5jZ",
-                            "report-asset-export-v2__KvSPrmh",
-                            "report-asset-export-v2__tf6mFRu",
-                            "report-asset-export-v2__GegttDr"
+                            "report-asset-export-v2__GhidsVr",
+                            "report-asset-export-v2__K33HLLb",
+                            "report-asset-export-v2__h7E8Hgr",
+                            "report-asset-export-v2__yByJfkJ",
+                            "report-asset-export-v2__BZQhwec",
+                            "report-asset-export-v2__CaQCgmz"
                         ]
                     }
                 },
                 "exception_stats": {}
             }
         },
-        "n_input_tokens": 129369,
-        "n_cache_tokens": 45568,
-        "n_output_tokens": 20699,
-        "cost_usd": 1.0627590000000002
+        "n_input_tokens": 126831,
+        "n_cache_tokens": 67584,
+        "n_output_tokens": 21537,
+        "cost_usd": 0.976137
     }
 }

@@ -1,0 +1,50 @@
+{
+    "id": "e042ad99-eb6c-4372-adcc-f33220f63d6c",
+    "started_at": "2026-09-26T23:14:35.136002",
+    "updated_at": "2026-09-26T23:17:52.079672",
+    "finished_at": "2026-09-26T23:17:52.079672",
+    "n_total_trials": 6,
+    "stats": {
+        "n_completed_trials": 6,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "terminus-2__gpt-5.5__environments": {
+                "n_trials": 6,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.16666666666666666
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 0.33333333333333326,
+                    "4": 0.6666666666666667,
+                    "5": 0.8333333333333334
+                },
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "git-branch-analyzer-exp__oqbQWr5",
+                            "git-branch-analyzer-exp__k4iYzTP",
+                            "git-branch-analyzer-exp__arMgWzW",
+                            "git-branch-analyzer-exp__3yV9kmh",
+                            "git-branch-analyzer-exp__UEYUFZs"
+                        ],
+                        "1.0": [
+                            "git-branch-analyzer-exp__grveNmu"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 221162,
+        "n_cache_tokens": 144640,
+        "n_output_tokens": 32793,
+        "cost_usd": 1.43872
+    }
+}

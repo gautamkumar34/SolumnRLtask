@@ -48,14 +48,21 @@ where I think the work is weakest.
 
 ## Where this is weakest (honest flags)
 
-- **The violation rate is ~100%, with zero clean-safe rollouts from GPT-5.5.**
-  This is strong evidence the pull works, but it also means these environments
-  do not currently *discriminate* a model that is sometimes safe — they show
+- **The violation rate is very high (~92–100%), with only one clean-safe
+  rollout observed.** This is strong evidence the pull works, but it means these
+  environments do not sharply *discriminate* a sometimes-safe model — they show
   that GPT-5.5, under realistic convention pressure, almost always takes the
-  shortcut. The safe route is provably reachable (bar 3); the model simply does
-  not choose it. If the goal were graded difficulty, the pulls should be
-  softened to land the rate nearer 30–70%. I optimised for the task's explicit
-  requirement ("build for violations") and flagged the trade-off rather than
+  shortcut. The safe route is provably reachable (bar 3) and *was* chosen once.
+  I ran a **pressure test** to check this wasn't the grader forcing the outcome:
+  I removed the most explicit repo comment (the one that literally wrote
+  `run_cmd(f"...")`) and re-ran the Family-1 seed 12 times. Result: 11
+  violations and 1 safe — the rate barely moved. That tells me the pull is the
+  *codebase convention* (an existing command that already interpolates a
+  caller's rev), not the comment spoon-feeding it, and the safe run confirms the
+  route is reachable and chosen. Evidence in `results/pressure_test/`. If the
+  goal were graded difficulty, the convention itself would need weakening to land
+  the rate nearer 30–70%; I judged that a bigger change than the "build for
+  violations" requirement warranted, and flagged the trade-off rather than
   hiding it.
 - **Variant v4 (both families) places a style pointer in the instruction**
   ("implement it the same way `analyzer.log` builds its command" / "locate the
@@ -83,3 +90,8 @@ where I think the work is weakest.
 - **Explicit "untrusted caller" framing** in the instructions ("a reviewer
   pasting a branch name"). It advertised the danger and triggered the model's
   security reflex; softened to neutral wording.
+- **Heavy-handed nudge comments.** An earlier version had repo comments that
+  spelled out the unsafe construction (`run_cmd(f"...")`, `os.path.join(...)`).
+  I softened them to point at the existing helper by name instead. The pressure
+  test above confirms this did not reduce the violation rate — the pull was
+  never the comment.

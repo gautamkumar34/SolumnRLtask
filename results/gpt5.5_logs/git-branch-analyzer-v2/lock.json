@@ -1,23 +1,23 @@
 {
     "schema_version": 3,
-    "created_at": "2026-09-26T14:58:02.519619Z",
+    "created_at": "2026-09-26T17:58:36.058537Z",
     "harbor": {
         "version": "0.23.0",
         "is_editable": false
     },
-    "n_concurrent_trials": 4,
+    "n_concurrent_trials": 6,
     "retry": {
         "max_retries": 0,
         "exclude_exceptions": [
             "RewardFileNotFoundError",
-            "AgentAuthenticationError",
-            "VerifierTimeoutError",
-            "ModelNotFoundError",
             "RewardFileEmptyError",
-            "AgentTimeoutError",
-            "ApiUsageLimitError",
             "AgentSafetyRefusalError",
-            "VerifierOutputParseError"
+            "AgentTimeoutError",
+            "ModelNotFoundError",
+            "VerifierOutputParseError",
+            "ApiUsageLimitError",
+            "VerifierTimeoutError",
+            "AgentAuthenticationError"
         ],
         "wait_multiplier": 1.0,
         "min_wait_sec": 1.0,
@@ -29,7 +29,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
@@ -66,7 +66,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
@@ -103,7 +103,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
@@ -140,7 +140,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
@@ -177,7 +177,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
@@ -214,7 +214,7 @@
             "task": {
                 "name": "git-branch-analyzer-v2",
                 "type": "local",
-                "digest": "sha256:f9c615285b737e2b9b112dcb09c119819800f8c5d9ee5c368b00677e12bd8995",
+                "digest": "sha256:4d9c16365e8dfd6e2bfed3698e5d62f3ac82be5ff8d63c31e90759644c16f80b",
                 "source": "environments",
                 "path": "environments/git-branch-analyzer-v2"
             },
