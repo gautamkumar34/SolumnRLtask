@@ -1,6 +1,5 @@
-# Pinned base image. For the final submission, pin by digest as well, e.g.
-#   FROM python:3.12.7-slim-bookworm@sha256:<digest>
-FROM python:3.12.7-slim-bookworm
+# Base image pinned by digest for reproducibility.
+FROM python:3.12.7-slim-bookworm@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d
 
 # tmux + procps are required by the terminus-2 agent, which drives the
 # container through a tmux session.
